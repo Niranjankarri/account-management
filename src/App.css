@@ -1,0 +1,82 @@
+/* Styles for the container */
+.account-container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.red-highlight {
+  background-color: rgb(222, 207, 207);
+}
+
+/* Styles for the card */
+.account-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Styles for the table */
+.account-table-container {
+  overflow-x: auto;
+}
+
+.account-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account-table th, .account-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.account-table th {
+  background-color: #f2f2f2;
+}
+
+.account-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Styles for form inputs */
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styles for buttons */
+.btn {
+  background-color: #6fcf6f;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #7e987f;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+}
+
+.icon-group button {
+  margin-right: 5px; /* Adjust as needed for spacing between icons */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+  .account-table th, .account-table td {
+    padding: 6px;
+  }
+}
