@@ -1,0 +1,185 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-account-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn.add {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 12px 24px; /* Increase padding for button */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn.add:hover {
+  background-color: #45a049; /* Darker shade of green on hover */
+}
+
+
+
+/* Styles for the container */
+.account-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles for the card */
+.account-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  padding: 30px;
+}
+
+/* Styles for the table container */
+.account-table-container {
+  overflow-x: auto;
+}
+
+/* Styles for the table */
+.account-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f2f2f2; /* Changed to a bit darker color */
+}
+
+.account-table th,
+.account-table td {
+  border: 1px solid #dddddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.account-table th {
+  background-color: #e0e0e0; /* Adjusted to a bit lighter shade */
+}
+
+/* Alternate row background color */
+.account-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Styles for form inputs */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Styles for buttons */
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn.edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn.edit:hover {
+  background-color: #218838;
+}
+
+.btn.delete {
+  background-color: #da2250; /* Salmon */
+  color: white;
+}
+
+.btn.delete:hover {
+  background-color: #a30f34; /* Darker shade of salmon on hover */
+}
+
+.btn.save {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.btn.save:hover {
+  background-color: #218838; /* Darker shade of green on hover */
+}
+
+.btn.cancel {
+  background-color: #da2250; /* Yellow */
+  color: white;
+}
+
+.btn.cancel:hover {
+  background-color: #a30f34; /* Darker shade of yellow on hover */
+}
+
+
+
+/* Icon group container */
+.icon-group {
+  display: flex;
+  align-items: center;
+}
+
+.icon-group button {
+  margin-right: 20px;
+}
+
+/* Password field container */
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-icon {
+  cursor: pointer;
+  color: #888888;
+  transition: color 0.3s;
+}
+
+.password-icon:hover {
+  color: #333333;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .account-table th,
+  .account-table td {
+    padding: 12px;
+  }
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.button-group button {
+  margin-right: 10px;
+  padding: 5px 10px; /* Adjust button padding */
+}
+
+/* Adjust button icon size */
+.button-group button i {
+  font-size: 16px;
+}
