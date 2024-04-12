@@ -1,6 +1,16 @@
 export const validateRequiredFields = (newAccount) => {
-  if (!newAccount.firstname || !newAccount.mobileno) {
-    return 'fields marked with * are mandatory';
+  if (!newAccount.firstname) {
+    return 'firstname is mandatory';
+  }
+  return '';
+};
+
+export const validateMobile = (mobileno) => {
+  if(!mobileno){
+    return 'Mobile no is mandatory';
+  }
+  if (!/^\d{10}$/.test(mobileno)) {
+    return 'Mobile No must be 10 digits';
   }
   return '';
 };

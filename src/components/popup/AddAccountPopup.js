@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './AddAccountPopup.css';
-import { validateEmail, validatePassword, validateConfirmPassword, validateRequiredFields } from '../../utils/validator';
+import { validateEmail, validatePassword, validateConfirmPassword, validateRequiredFields, validateMobile } from '../../utils/validator';
 import accountService from '../../services/accountService';
 
 function AddAccountPopup({ showPopup, setShowPopup, handleInputChange, fetchAccounts, newAccount, setNewAccount}) {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [requiredFieldsError, setRequiredFieldsError] = useState('');
+  const [mobileError, setMobileError] = useState('');
 
   const handleAdd = async () => {
 
@@ -14,6 +15,7 @@ function AddAccountPopup({ showPopup, setShowPopup, handleInputChange, fetchAcco
     const emailValidationError = validateEmail(newAccount.email);
     const passwordValidationError = validatePassword(newAccount.password);
     const confirmPasswordValidationError= validateConfirmPassword(newAccount.password, newAccount.confirmPassword);
+    const mobileValidationError= validateMobile(newAccount.mobileno);
 
     if (requiredFieldsValidatorError) {
       setRequiredFieldsError(requiredFieldsValidatorError);
@@ -41,6 +43,13 @@ function AddAccountPopup({ showPopup, setShowPopup, handleInputChange, fetchAcco
       return;
     }else{
       setPasswordError('');
+    }
+
+    if(mobileValidationError){
+      setMobileError(mobileValidationError);
+      return;
+    }else{
+      setMobileError('');
     }
 
     try {
@@ -76,7 +85,7 @@ function AddAccountPopup({ showPopup, setShowPopup, handleInputChange, fetchAcco
               <input type="password" name="confirmPassword" value={newAccount.confirmPassword} onChange={(e) => handleInputChange(e)} placeholder="Confirm Password *" />
               {passwordError && <p className="error">{passwordError}</p>}
               <input type="text" name="mobileno" value={newAccount.mobileno} onChange={(e) => handleInputChange(e)} placeholder="Mobile No *" />
-              {requiredFieldsError && <p className="error">{requiredFieldsError}</p>}
+              {mobileError && <p className="error">{mobileError}</p>}
               <div class="button-groups">
                 <button className="button-save" onClick={handleAdd}>Save</button>
                 <button className="button-cancel" onClick={() => setShowPopup(false)}>Cancel</button>
